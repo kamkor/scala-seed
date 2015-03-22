@@ -9,9 +9,10 @@ lazy val scalatest = "org.scalatest" %% "scalatest" % "2.2.4"
 
 lazy val scalacheck = "org.scalacheck" %% "scalacheck" % "1.12.2"
 
-lazy val root = (project in file(".")).
-  settings(commonSettings: _*).
-  settings(  
+lazy val root = (project in file(".")).  
+  settings(
+	commonSettings,
+  
     name := "scala-seed",
 	
     // Include only src/main/scala in the compile configuration
