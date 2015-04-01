@@ -1,15 +1,13 @@
 package kamkor
 
-import org.slf4j.LoggerFactory
+import com.typesafe.scalalogging.LazyLogging
 
-object GreeterApp {
-
-  val Logger = LoggerFactory.getLogger(GreeterApp.getClass())
+object GreeterApp extends LazyLogging {
 
   def main(args: Array[String]): Unit = {
     val greeter = new Greeter("Hello")
-    Logger.info(greeter.greet("World"))
-    Logger.info(greeter.greet("My Friend"))
+    logger.info(greeter.greet("World"))
+    logger.info(greeter.greet("My Friend"))
   }
 
 }
